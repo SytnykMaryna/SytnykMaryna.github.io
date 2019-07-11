@@ -1,0 +1,577 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url("fonts/Heebo/Heebo-Regular.ttf") format("ttf");
+  src: url("fonts/Heebo/Heebo-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+  src: url("fonts/Roboto/Roboto-Regular.woff") format("woff");
+}
+@-webkit-keyframes anim {
+  0% {
+    -webkit-transform: translate(0px, -30px);
+            transform: translate(0px, -30px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0% {
+    -webkit-transform: translate(0px, -30px);
+            transform: translate(0px, -30px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+.animate {
+  -webkit-animation: anim 2s ease-in-out;
+          animation: anim 2s ease-in-out;
+}
+
+
+
+/* header */
+  .menu {
+    font-family: 'Heebo';
+    padding: 0 2%;
+    width: 100%;
+  }
+  .menu .menu_top, .menu .menu_bottom {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu .menu_top_stripe, .footer_stripe {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+  }
+  .menu .menu_bottom .logo a {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Roboto';
+  }
+  .menu .menu_bottom nav ul {
+    display: block;
+  }
+  .menu .menu_bottom nav ul li {
+    display: inline-block;
+  }
+  .menu .menu_bottom nav ul li a {
+    display: block;
+    font-family: 'Heebo' ,sans-serif;
+  }
+
+  .wrapper {
+    width: 84%;
+    margin: 0 auto;
+  }
+  .wrapper .header_info {
+    text-align: center;
+    font-family: 'Heebo';
+  }
+  .wrapper .header_info h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 2% 0;
+  }
+  .wrapper .header_info p {
+    font-family: 'Roboto';
+    margin-bottom: 3%;
+  }
+  .wrapper .header_info img {
+    height: 70vh;
+    width: 100%;
+  }
+
+
+  /* main */
+  main {
+    flex-grow: 1;
+    font-family: 'Roboto';
+    text-align: center;
+  }
+  .our_services h2, .contacts h2, .about_me h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 6% 0;
+  }
+  
+  .our_services_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 34vh;
+    margin: 5% 0;
+  }
+  .our_services_block img {
+    width: 40%;
+    height: 30vh;
+    margin: 1% 0;
+  }
+  .price, .price_other {
+    width: 55%;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding-left: 3%;
+  }
+  .price p, .price_other p {
+    font-size: 1.3rem;
+    padding: 3% 0;
+    color: #e99292;
+  }
+  .price ul , .price_other ul {
+    display: block;
+  }
+  .price ul li, .price_other ul li {
+    margin: 1.5% 0;
+    font-size: 1rem;
+  }
+  .price ul li span {
+    display: block;
+    margin: 1.5% 0 1.5% 1.5%;
+    font-size: 1rem;
+  }
+  .price ul li:before, .price_other ul li:before {
+    content: "-";
+    padding-right: 5px;
+  }
+   .price_other {
+    width: 49%;
+    line-height: 1.3rem;
+    height: 36vh;
+  }
+  .about_me_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 10% 0;
+  }
+  .about_me_text {
+    width: 55%;
+    height: 80vh;
+    background-color: #f7f7f7;
+    padding: 5%;
+    position: relative;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+  }
+  .about_me_text p {
+    -webkit-animation: anim 2s ease-in-out;
+            animation: anim 2s ease-in-out;
+  }
+ .about_me_text p:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10%;
+  }
+  .about_me_text p:nth-child(2) {
+    margin-bottom: 7%;
+    color: #e99292;
+  }
+ .about_me_text p:last-child {
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  .about_me_flex .photo {
+    width: 44%;
+    height: 90vh;
+    background-color: #f6d8d4;
+    position: relative;
+    top: 0;
+    left: -5%;
+    z-index: 0;
+  }
+   .contacts p {
+    margin: 3% 0;
+  }
+
+  .contacts_flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  .contacts_flex > div {
+    height: 25vh;
+    width:32%;
+    padding: 3% 1%;
+    margin-bottom:5%;
+    background-color:#f7f7f7; 
+  }
+  .contacts_flex p span {
+    display:block;
+    color: #e99292;
+    font-size: 1.3rem;
+    margin: 5% 0;
+  } 
+  #map{
+    width: 100%;
+    height: 55vh;
+  }
+
+ 
+  footer {
+    flex-shrink: 0;
+    background: #ffffff;
+    font-family: 'Heebo';
+    height: 12vh;
+    line-height: 12vh;
+    margin:0 2%;
+  }
+
+  .footer_flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  .footer_flex p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .menu .menu_top, .menu .menu_bottom {
+    height: 30px;
+    line-height: 30px;
+  }
+  
+  .logo a {
+    font-size: 1.3rem;
+  }
+  
+  .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+ .header_info h1 {
+    font-size: 2.3rem;
+    margin: 2% 0;
+  }
+  .header_info p {
+    margin-bottom: 3%;
+  }
+  .header_info img {
+    height: 60vh;
+  }
+
+ 
+  .our_services h2, .contacts h2, .about_me h2{
+    font-size: 1.7rem;
+    padding: 5% 0;
+  }
+  .our_services_block {
+    height: 36vh;
+    margin: 8% 0;
+  }
+  .our_services_block img {
+    width: 40%;
+    height: 33vh;
+    margin: 1% 0;
+  }
+   .our_services_block .price,  .our_services_block .price_other {
+    width: 58%;
+    padding-left: 2%;
+  }
+ .our_services_block .price p, .our_services_block .price_other p {
+    font-size: 1.2rem;
+    padding: 2% 0;
+  }
+  
+.our_services_block .price ul li,.our_services_block .price_other ul li {
+    margin: 1.2% 0;
+    font-size: 1rem;
+  }
+ 
+  .our_services_block .price_other {
+    width: 100%;
+    line-height: 1.2rem;
+    height: 40vh;
+  }
+  
+  
+  .about_me_flex {
+    margin: 10% 0;
+  }
+ .about_me_text {
+    width: 60%;
+    height: 71vh;
+   
+    padding: 2.5%;
+    top: 38px;
+
+  }
+  
+ .about_me_text p:first-child {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+  }
+  .about_me_text p:nth-child(2) {
+    font-size: 1rem;
+    margin-bottom: 4%;
+  }
+  .about_me_text p:last-child {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+ .about_me_flex .photo {
+    width: 39%;
+    height: 83vh;
+  }
+
+  h3 {
+    margin-top:50%;
+  }
+
+
+  .contacts{
+    width: 100%;
+    height: 60vh;
+    margin-top:10%;
+
+  }
+  .contacts p {
+    margin: 5% 0;
+  }
+  .contacts_flex > div {
+    width:100%;
+    padding: 2.5% 1%;
+    margin-bottom:5%;
+    height: 33vh;
+  }
+  .contacts_flex p span {
+    font-size: 1.2rem;
+    margin: 2.5% 0;
+  } 
+
+  
+  footer {
+    margin:70%  2% 0 2%;
+  }
+
+  .footer_flex p{
+    font-size: 1.3rem
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+.menu {
+  font-family: 'Heebo';
+  padding: 0 2%;
+  width: 100%;
+}
+.menu .menu_top, .menu .menu_bottom {
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; */
+}
+.menu .menu_top_stripe {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+.menu .menu_bottom .logo a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: 'Roboto';
+}
+.menu .menu_bottom nav ul {
+  display: block;
+}
+.menu .menu_bottom nav ul li {
+  display: inline-block;
+}
+.menu .menu_bottom nav ul li a {
+  display: block;
+  font-family: 'Heebo' ,sans-serif;
+}
+
+.wrapper {
+  width: 96%;
+  margin: 0 auto;
+}
+.wrapper .header_info {
+  text-align: center;
+  font-family: 'Heebo';
+}
+.wrapper .header_info h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 2% 0;
+}
+.wrapper .header_info p {
+  font-family: 'Roboto';
+  margin-bottom: 3%;
+}
+.wrapper .header_info img {
+  height: 50vh;
+  width: 100%;
+}
+
+
+/* main */
+main {
+  font-family: 'Roboto';
+  text-align: center;
+}
+.our_services h2, .contacts h2, .about_me h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 11% 0;
+}
+
+.our_services_block {
+  display: block;
+  height: 33vh;
+  margin: 5% 0;
+}
+
+.our_services_block img {
+  display:none
+}
+.price, .price_other {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background-color: #f7f7f7;
+  padding-left: 0;
+}
+.price p, .price_other p {
+  font-size: 1rem;
+  padding: 3% 0 3% 3%;
+  color: #e99292;
+}
+.price ul , .price_other ul {
+  display: block;
+}
+.price ul li, .price_other ul li {
+  margin: 1.2% 1%;
+  font-size: 1rem;
+}
+.price ul li:before, .price_other ul li:before {
+  content: "-";
+  padding-right: 5px;
+}
+ .price_other {
+  width: 100%;
+  line-height: 1.2rem;
+  height: 36vh;
+}
+.about_me_flex {
+  display: block;
+  margin: 0;
+}
+.about_me_text {
+  width: 100%;
+  height: 65vh;
+  background-color: #f7f7f7;
+  padding: 5%;
+}
+.about_me_text p {
+  -webkit-animation: anim 2s ease-in-out;
+          animation: anim 2s ease-in-out;
+}
+.about_me_text p:first-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10%;
+}
+.about_me_text p:nth-child(2) {
+  margin-bottom: 7%;
+  color: #e99292;
+}
+.about_me_text p:last-child {
+  line-height: 1rem;
+  text-align: justify;
+}
+.about_me_flex .photo {
+  display:none;
+}
+
+h3 {
+  margin-top:100%;
+}
+
+
+.contacts_flex > div{
+  display: block;
+  width: 100%;
+  height: 35vh;
+  margin-top:10%;
+}
+ .contacts p {
+  margin: 3% 0;
+}
+ .contacts p span {
+  color: #e99292;
+  font-size: 1.1rem;
+}
+#map{
+  width: 100%;
+  height: 55vh;
+}
+}
