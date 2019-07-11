@@ -490,6 +490,12 @@ main {
   margin: 5% 0;
 }
 
+.our_services_block__injections {
+  display: block;
+  height: 34vh;
+  margin-bottom:4%;
+}
+
 .our_services_block img {
   display:none
 }
@@ -516,6 +522,7 @@ main {
   content: "-";
   padding-right: 5px;
 }
+
  .price_other {
   width: 100%;
   line-height: 1.2rem;
@@ -527,7 +534,7 @@ main {
 }
 .about_me_text {
   width: 100%;
-  height: 65vh;
+  height: 66vh;
   background-color: #f7f7f7;
   padding: 5%;
 }
