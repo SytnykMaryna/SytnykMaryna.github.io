@@ -418,16 +418,24 @@ a {
   padding: 0 2%;
   width: 100%;
 }
+.menu_top_socnetwork {
+  float: right;
+}
+.menu_top_contacts{
+  float:left;
+}
+
+.menu .menu_bottom .logo a {
+  display:none;
+}
+
+
 .menu .menu_top, .menu .menu_bottom {
   height: 20px;
   line-height: 20px;
   width: 100%;
-  /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; */
+  display: inline-block;
+  margin: 2% 0;
 }
 .menu .menu_top_stripe {
   height: 2px;
@@ -441,13 +449,16 @@ a {
 }
 .menu .menu_bottom nav ul {
   display: block;
+  text-align: center;
 }
 .menu .menu_bottom nav ul li {
   display: inline-block;
+  margin: 2% 5%;
 }
 .menu .menu_bottom nav ul li a {
   display: block;
   font-family: 'Heebo' ,sans-serif;
+  
 }
 
 .wrapper {
@@ -461,7 +472,7 @@ a {
 .wrapper .header_info h1 {
   text-transform: uppercase;
   font-size: 1.5rem;
-  margin: 2% 0;
+  margin: 8% 0;
 }
 .wrapper .header_info p {
   font-family: 'Roboto';
@@ -484,17 +495,12 @@ main {
   padding: 11% 0;
 }
 
-.our_services_block {
-  display: block;
-  height: 33vh;
-  margin: 5% 0;
-}
 
-.our_services_block__injections {
+/* #our_services_block__injections {
   display: block;
   height: 34vh;
   margin-bottom:4%;
-}
+} */
 
 .our_services_block img {
   display:none
@@ -534,9 +540,10 @@ main {
 }
 .about_me_text {
   width: 100%;
-  height: 66vh;
+  height: 67vh;
   background-color: #f7f7f7;
-  padding: 5%;
+  padding: 4%;
+  margin-bottom: 10%;
 }
 .about_me_text p {
   -webkit-animation: anim 2s ease-in-out;
