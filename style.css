@@ -88,6 +88,20 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+
+  .menu .menu_bottom .logo {
+    -webkit-flex: 1 1 800px; 
+    -ms-flex:  1 1 800px; 
+    flex:  1 1 800px;
+  }
+
+  .menu .menu_bottom nav {
+    -webkit-flex: 1 1 200px; 
+    -ms-flex:  1 1 200px; 
+    flex:  1 1 200px;
+  }
+
+
   .menu .menu_top_stripe, .footer_stripe {
     height: 3px;
     width: 100%;
@@ -103,6 +117,7 @@ a {
   }
   .menu .menu_bottom nav ul li {
     display: inline-block;
+    margin-right: 11%;
   }
   .menu .menu_bottom nav ul li a {
     display: block;
