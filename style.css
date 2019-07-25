@@ -522,13 +522,13 @@ main {
 }
 .price, .price_injection, .price_other {
   width: 100%;
-  height: 32vh;
+  height: 34vh;
   text-align: left;
   background-color: #f7f7f7;
   padding-left: 0;
 }
 .price_injection {
-  height: 35vh;
+  height: 37vh;
 }
 .price p,.price_injection p, .price_other p {
   font-size: 1rem;
